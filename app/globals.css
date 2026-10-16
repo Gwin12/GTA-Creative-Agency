@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0c0b0a;
+  --color-foreground: #f4f3f0;
+
+  /* Primary Brand Color: Main CTAs, high-contrast actions, key highlights */
+  --color-primary: #ffffff;
+  --color-primary-foreground: #0c0b0a;
+  --color-primary-hover: #e5e5e5;
+
+  /* Secondary Accent Color: Eyebrows, film metadata tags, glowing highlights */
+  --color-secondary: #fbbf24;
+  --color-secondary-foreground: #0c0b0a;
+  --color-secondary-hover: #f59e0b;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #0c0b0a;
+  color: #f4f3f0;
+  font-family: var(--font-geist-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom cinematic glow and scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0b0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #262422;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3d3a36;
+}
+
+/* Hide floating Next.js dev indicator */
+nextjs-portal,
+[data-nextjs-toast],
+[data-nextjs-dev-indicator] {
+  display: none !important;
+}
